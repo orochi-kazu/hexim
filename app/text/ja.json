@@ -1,0 +1,12 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "game_title": "ヘックセィム",
+  "game_tiles": [
+    {
+      "declarations": ["input count", "local tiles = count: plural"],
+      "match": {
+        "tiles=other": "タイルが{count}枚"
+      }
+    }
+  ]
+}
