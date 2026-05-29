@@ -2,33 +2,22 @@
   import { browser } from '$app/environment'
   import favicon from '$lib/assets/favicon.svg'
   import { themes } from '$lib/core/settings.svelte'
-  import { deps } from '$lib/deps'
+  import { settings } from '$lib/deps'
 
   const { children } = $props()
 
-  let browserPrefersDark = $state(undefined)
-  let styleTheme = $state(themes.auto)
-
-  const setThemeByDevicePreference = (isDark) => {
-    deps.settings.deviceTheme.set(isDark ? themes.dark : themes.light)
-    browserPrefersDark = isDark
-
-    if (deps.settings.theme.get() === themes.auto) {
-      styleTheme = browserPrefersDark ? themes.dark : themes.light
-    } else {
-      styleTheme = theme
-    }
-  }
-
   if (browser) {
     let preferDark = window.matchMedia('(prefers-color-scheme: dark)')
-    setThemeByDevicePreference(preferDark)
+    settings.theme.device = preferDark ? themes.dark : themes.light
 
     preferDark.addEventListener('change', (event) => {
-      setThemeByDevicePreference(event.matches)
-      console.log('prefers-color-scheme changed', { browserPrefersDark })
+      settings.theme.device = event.matches ? themes.dark : themes.light
     })
   }
+
+  let styleTheme = $derived.by(() =>
+    settings.theme.selected === themes.auto ? settings.theme.device : settings.theme.selected,
+  )
 </script>
 
 <svelte:head>

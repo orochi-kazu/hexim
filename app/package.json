@@ -13,7 +13,7 @@
 
     "test": "vitest watch",
     "test:precommit": "npm run lint:check && npm run test:unit",
-    "test:ci": "npm run lint:check && npm run test:unit && npm run test:ui",
+    "test:ci": "npm audit && npm run lint:check && npm run test:unit && npm run test:ui",
     "test:ui": "playwright install && playwright test",
     "test:unit": "vitest --run",
 

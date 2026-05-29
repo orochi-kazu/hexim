@@ -4,14 +4,44 @@ const themes = Object.freeze({
   light: 'light',
 })
 
-let deviceTheme = $state(themes.auto)
-let theme = $state(themes.auto)
+const keys = Object.freeze({
+  theme: Object.freeze({
+    selected: Symbol('theme-selected'),
+  }),
+  locale: Object.freeze({
+    override: Symbol('locale-override'),
+  }),
+})
 
-const setDeviceTheme = (value) => (deviceTheme = value)
-const setTheme = (value) => (theme = value)
+const settings = $state({
+  theme: {
+    device: undefined,
+    selected: undefined,
+  },
+  locale: {
+    override: undefined,
+  },
+})
 
-export default {
-  deviceTheme: { get: () => deviceTheme, set: setDeviceTheme },
-  theme: { get: () => theme, set: setTheme },
+const settingsBuilder = ({ save, load }) => {
+  const loadOr = (key, defaultValue) => {
+    try {
+      return load(key)
+    } catch {
+      return defaultValue
+    }
+  }
+
+  settings.theme.selected = loadOr(keys.theme.selected, themes.auto)
+  settings.locale.override = loadOr(keys.locale.override, null)
+
+  $effect.root(() => {
+    $effect(() => save(keys.theme.selected, settings.theme.selected))
+    $effect(() => save(keys.locale.override, settings.locale.override))
+  })
+
+  return settings
 }
-export { themes }
+
+export default settingsBuilder
+export { keys, themes }

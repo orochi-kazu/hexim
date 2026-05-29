@@ -11,6 +11,7 @@ nvm use             # switch to the right npm version
 npm install         # install dependencies (`npm i` for short)
 npm start           # start dev server
 npm start -- --open # start and open in a new browser tab/window
+npm start -- --host # start and print various network host addresses
 npm test            # run unit tests in watch mode
 ```
 

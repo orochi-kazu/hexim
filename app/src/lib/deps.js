@@ -1,5 +1,6 @@
-import settings from './core/settings.svelte'
+import settingsBuilder from './core/settings.svelte'
+import { load, save } from './data/storage/local.svelte'
 
-const depsBuilder = () => ({ settings })
+const settings = settingsBuilder({ save, load })
 
-export const deps = depsBuilder()
+export { settings }
