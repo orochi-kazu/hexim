@@ -1,5 +1,6 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
+
   "game_title": "Hexim",
   "game_tiles": [
     {
@@ -9,5 +10,28 @@
         "tiles=other": "{count} tiles"
       }
     }
-  ]
+  ],
+
+  "locale_legible": "{displayName} ({locale})",
+  "locale_en": "English",
+  "locale_ja": "Japanese",
+
+  "common_action_back": "Back",
+  "common_menu_note": "(note: {message})",
+  "common_menu_options_prefix": "«",
+  "common_menu_options_suffix": "»",
+
+  "menu_main_title": "Main menu",
+  "menu_main_new_game": "New game",
+  "menu_main_new_game_plus": "New game +",
+  "menu_main_old_game": "Old game",
+  "menu_main_settings": "Settings",
+  "menu_main_attrib": "Attribution",
+  "menu_settings_title": "Settings",
+  "menu_settings_lang": "Language",
+  "menu_settings_lang_note": "this will reload the app",
+  "menu_settings_theme": "Theme",
+  "menu_settings_theme_light": "Light",
+  "menu_settings_theme_auto": "Auto",
+  "menu_settings_theme_dark": "Dark"
 }

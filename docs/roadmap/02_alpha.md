@@ -66,4 +66,4 @@
 ## Platform
 
 - [ ] Session persistence
-  - [ ] Service worker
+- [ ] Service worker for full offline mode

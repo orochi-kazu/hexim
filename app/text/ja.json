@@ -1,5 +1,6 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
+
   "game_title": "ヘックセィム",
   "game_tiles": [
     {
@@ -8,5 +9,28 @@
         "tiles=other": "タイルが{count}枚"
       }
     }
-  ]
+  ],
+
+  "locale_legible": "{displayName}（{locale}）",
+  "locale_en": "英語",
+  "locale_ja": "日本語",
+
+  "common_action_back": "戻る",
+  "common_menu_note": "（注意、{message}）",
+  "common_menu_options_prefix": "«",
+  "common_menu_options_suffix": "»",
+
+  "menu_main_title": "Main menu",
+  "menu_main_new_game": "ニューゲーム",
+  "menu_main_new_game_plus": "ニューゲーム＋",
+  "menu_main_old_game": "Old game",
+  "menu_main_settings": "設定",
+  "menu_main_attrib": "Attribution",
+  "menu_settings_title": "設定",
+  "menu_settings_lang": "言語設定",
+  "menu_settings_lang_note": "リロード",
+  "menu_settings_theme": "Theme",
+  "menu_settings_theme_light": "明るい",
+  "menu_settings_theme_auto": "オート",
+  "menu_settings_theme_dark": "暗い"
 }

@@ -3,19 +3,22 @@
   import favicon from '$lib/assets/favicon.svg'
   import { themes } from '$lib/core/settings.svelte'
   import { settings } from '$lib/deps'
+  import style from '$lib/ui/style.svelte'
 
   const { children } = $props()
 
   if (browser) {
-    let preferDark = window.matchMedia('(prefers-color-scheme: dark)')
-    settings.theme.device = preferDark ? themes.dark : themes.light
+    const setDeviceThemeIsDark = (isDark) => {
+      settings.theme.device = isDark ? themes.dark : themes.light
+    }
 
-    preferDark.addEventListener('change', (event) => {
-      settings.theme.device = event.matches ? themes.dark : themes.light
-    })
+    let preferDark = window.matchMedia('(prefers-color-scheme: dark)')
+    setDeviceThemeIsDark(preferDark)
+
+    preferDark.addEventListener('change', (event) => setDeviceThemeIsDark(event.matches))
   }
 
-  let styleTheme = $derived.by(() =>
+  const styleTheme = $derived.by(() =>
     settings.theme.selected === themes.auto ? settings.theme.device : settings.theme.selected,
   )
 </script>
@@ -24,9 +27,10 @@
   <link rel="icon" href={favicon} />
 </svelte:head>
 
-<div id="game" class={styleTheme}>{@render children()}</div>
+<div class={['themeable', styleTheme]}>{@render children()}</div>
 
 <style lang="scss">
+  /* Elements in app.html */
   :global(body) {
     padding: 0;
     margin: 0;
@@ -36,16 +40,13 @@
     flex-grow: 1;
     display: flex;
   }
-  div#game {
-    min-height: 100vh;
+
+  /* Local elements */
+  div.themeable {
+    min-height: 100svh;
     flex-grow: 1;
-    &.light {
-      background-color: mintcream;
-      color: black;
-    }
-    &.dark {
-      background-color: black;
-      color: mintcream;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 </style>

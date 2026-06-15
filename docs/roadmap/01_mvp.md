@@ -2,13 +2,38 @@
 
 ## Foundation
 
-- [ ] Skeleton app with version config
-- [ ] Linter and formatter
-- [ ] Commit message linter and helpers
-- [ ] Test, build, and release scripts
+- [x] Skeleton app with version config
+- [x] ~~Linter and~~ formatter
+- [ ] ~~Commit message linter and helpers~~
+- [o] Scripts
+  - [x] Test
+  - [o] Build
+  - [ ] Publish/Release
 
 ## Presentation
 
+- [o] Design system components
+  - [o] Out-of-game UI
+    - [x] Title
+    - [x] Text
+    - [x] Button
+    - [o] Menu
+      - [x] Mouse accessibility
+      - [x] Keyboard accessibility
+      - [x] Tab navigation accessibility
+      - [ ] Game controller accessibility
+      - [ ] Screen reader accessibility
+      - [ ] TV remote accessibility
+      - [ ] HID device accessibility
+    - [ ] Link
+    - [ ] TextInput
+    - [ ] Form?
+    - [ ] Interaction affordance (e.g. 'Enter' vs '🅐')
+    - [ ] Toast
+  - [ ] In-game UI
+    - [ ] Narratiom text
+    - [ ] Dialog text
+    - [ ] Narratiom text
 - [ ] Match creation
   - [ ] Match parameters
   - [ ] Player registration
@@ -88,6 +113,16 @@
   - [ ] Board
   - [ ] Tile
 
+## Domain (non-game)
+
+- [x] Settings
+  - [x] Locale
+  - [x] Theme
+
 ## System use cases
 
+- [x] Settings persistence
+
 ## Platform
+
+- [x] Local storage persistence
