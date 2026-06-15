@@ -7,7 +7,7 @@
 - [ ] ~~Commit message linter and helpers~~
 - [o] Scripts
   - [x] Test
-  - [o] Build
+  - [x] Build
   - [ ] Publish/Release
 
 ## Presentation

@@ -37,6 +37,6 @@
       ontoggleprev: chooseTheme.prev,
       onchooseoption: chooseTheme.set,
     },
-    { label: text.back(), type: 'link', path: '/menu' },
+    { label: text.back(), type: 'link', path: '#/menu' },
   ]}
 />

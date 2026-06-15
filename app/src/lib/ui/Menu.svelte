@@ -166,6 +166,8 @@
 
   a.menu-item {
     text-decoration: none;
+    color: var(--fg-ui);
+
     &:active,
     &:focus,
     &:hover,
