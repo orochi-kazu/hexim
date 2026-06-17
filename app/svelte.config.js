@@ -9,8 +9,9 @@ const config = {
   },
   kit: {
     adapter: adapter({ fallback: 'index.html' }),
-    output: { bundleStrategy: 'single' },
+    output: { bundleStrategy: 'inline' },
     router: { type: 'hash' },
+    paths: { base: '/hexim' },
   },
   preprocess: vitePreprocess(),
 }

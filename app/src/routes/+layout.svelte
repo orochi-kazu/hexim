@@ -1,6 +1,6 @@
 <script>
   import { browser } from '$app/environment'
-  import favicon from '$lib/assets/favicon.svg'
+  import { asset } from '$app/paths'
   import { themes } from '$lib/core/settings.svelte'
   import { settings } from '$lib/deps'
   import style from '$lib/ui/style.svelte'
@@ -24,7 +24,7 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" href={favicon} />
+  <link rel="icon" href={asset('/favicon.svg')} />
 </svelte:head>
 
 <div class={['themeable', styleTheme]}>{@render children()}</div>
