@@ -23,5 +23,12 @@ a lint check, and unit tests, to catch any other unexpected problems. Before com
 
 ```shellscript
 npm run build       # create a production version of the app
-npm run preview     # preview the production build
 ```
+
+Then open `build/index.html`, since it's all bundled into one file.
+
+## Deploy
+
+Arguably not "getting started", but run `./scripts/deploy.sh` from the project root.
+It will build, create a new branch, commit `index.html`, push, and reset the
+`release/ghp` branch to the new commit (so Github Pages can pick it up).

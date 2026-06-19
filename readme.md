@@ -2,6 +2,8 @@
 
 A friendly-but-still-competitive multiplayer game that feels like a European-style boardgame.
 
+See the current progress [online](https://orochi-kazu.github.io/hexim).
+
 ## High-level gameplay
 
 The game is divided into rounds, with two phases each.

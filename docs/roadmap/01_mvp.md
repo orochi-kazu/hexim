@@ -5,10 +5,10 @@
 - [x] Skeleton app with version config
 - [x] ~~Linter and~~ formatter
 - [ ] ~~Commit message linter and helpers~~
-- [o] Scripts
+- [x] Scripts
   - [x] Test
   - [x] Build
-  - [ ] Publish/Release
+  - [x] Publish/Release
 
 ## Presentation
 
