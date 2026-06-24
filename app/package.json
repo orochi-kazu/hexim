@@ -17,7 +17,7 @@
     "test:ui": "playwright install && playwright test",
     "test:unit": "vitest --run",
 
-    "build": "vite build",
+    "build": "BASE_PATH='/hexim' vite build",
     "preview": "serve build/",
     "preview:vite": "vite preview",
     "storybook": "storybook dev -p 6006",

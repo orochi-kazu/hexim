@@ -1,5 +1,6 @@
 <script>
   import { text } from '$lib/feat/text'
+  import Container from './Container.svelte'
   import Text from './Text.svelte'
 
   const { title, items, isShowingSubmenu } = $props()
@@ -113,8 +114,7 @@
   {/if}
 {/snippet}
 
-<div class="menu">
-  <div class="menu-title"><Text size="large">{title}</Text></div>
+<Container {title}>
   {#each items as item, i}
     {#if isShowingSubmenu}
       <div>{@render itemContent(item, i)}</div>
@@ -145,23 +145,11 @@
       </div>
     {/if}
   {/each}
-</div>
+</Container>
 
 <style lang="scss">
   :root {
     --label-min-width: 6rem;
-  }
-
-  .menu {
-    padding: var(--padding-margin-xsmall);
-    background-color: var(--bg-ui);
-  }
-
-  .menu-title {
-    border-bottom: var(--border-width-small) solid var(--bg-ui-focus);
-    padding: 0 var(--padding-margin-small);
-    padding-bottom: var(--padding-margin-medium);
-    margin-bottom: var(--padding-margin-xsmall);
   }
 
   a.menu-item {

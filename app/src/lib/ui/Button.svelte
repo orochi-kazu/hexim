@@ -1,5 +1,5 @@
 <script>
-  import style from '$lib/ui/style.svelte'
+  import style from './style.svelte'
 
   const { onclick, children } = $props()
 </script>

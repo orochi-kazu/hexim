@@ -1,5 +1,5 @@
 <script>
-  import style from '$lib/ui/style.svelte'
+  import style from './style.svelte'
   export const titleSize = Object.freeze({
     large: Symbol('l'),
     medium: Symbol('m'),

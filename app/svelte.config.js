@@ -11,7 +11,7 @@ const config = {
     adapter: adapter({ fallback: 'index.html' }),
     output: { bundleStrategy: 'inline' },
     router: { type: 'hash' },
-    paths: { base: '/hexim' },
+    paths: { base: process.env.BASE_PATH ?? '' },
   },
   preprocess: vitePreprocess(),
 }

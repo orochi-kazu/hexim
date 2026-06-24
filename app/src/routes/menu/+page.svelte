@@ -16,6 +16,6 @@
     { label: text.newGamePlus(), onchoose: () => console.log('start from existing history') },
     { label: text.oldGame(), onchoose: () => console.log('load a saved game') },
     { label: text.settings(), type: 'link', path: '#/menu/settings' },
-    { label: text.attrib(), onchoose: () => console.log('credits, OSS acks, etc') },
+    { label: text.attrib(), type: 'link', path: '#/menu/attrib' },
   ]}
 />

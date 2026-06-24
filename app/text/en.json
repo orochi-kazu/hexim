@@ -25,13 +25,19 @@
   "menu_main_new_game": "New game",
   "menu_main_new_game_plus": "New game +",
   "menu_main_old_game": "Old game",
-  "menu_main_settings": "Settings",
-  "menu_main_attrib": "Attribution",
+
   "menu_settings_title": "Settings",
   "menu_settings_lang": "Language",
   "menu_settings_lang_note": "this will reload the app",
   "menu_settings_theme": "Theme",
   "menu_settings_theme_light": "Light",
   "menu_settings_theme_auto": "Auto",
-  "menu_settings_theme_dark": "Dark"
+  "menu_settings_theme_dark": "Dark",
+
+  "menu_attrib_title": "Attribution",
+  "menu_attrib_licences_title": "Licences",
+  "menu_attrib_credits_title": "Credits",
+  "menu_attrib_credits_github_link_prefix": "Check out the source ",
+  "menu_attrib_credits_github_link": "on Github",
+  "menu_attrib_credits_github_link_suffix": "."
 }
