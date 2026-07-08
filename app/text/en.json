@@ -36,6 +36,9 @@
 
   "menu_attrib_title": "Attribution",
   "menu_attrib_licences_title": "Licences",
+  "menu_attrib_licences_icon_title": "favicon.svg",
+  "menu_attrib_licences_icon_author": "AUTHOR: Dazzle UI",
+  "menu_attrib_licences_icon_licence": "LICENSE: CC Attribution License",
   "menu_attrib_credits_title": "Credits",
   "menu_attrib_credits_github_link_prefix": "Check out the source ",
   "menu_attrib_credits_github_link": "on Github",

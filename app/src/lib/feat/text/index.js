@@ -43,6 +43,13 @@ const menu = {
     title: m.menu_attrib_title,
     licences: {
       title: m.menu_attrib_licences_title,
+      favicon: {
+        title: m.menu_attrib_licences_icon_title,
+        author: m.menu_attrib_licences_icon_author,
+        licence: m.menu_attrib_licences_icon_licence,
+        link: () => 'https://www.svgrepo.com/page/licensing/#CC%20Attribution',
+      },
+      back: common.action.back,
     },
     credits: {
       title: m.menu_attrib_credits_title,
