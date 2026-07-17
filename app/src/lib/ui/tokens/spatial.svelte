@@ -2,6 +2,7 @@
   :global(:root) {
     --min-tappable-size: 2.4rem;
 
+    --padding-margin-xxxlarge: 1.6rem;
     --padding-margin-xxlarge: 1rem;
     --padding-margin-xlarge: 0.8rem;
     --padding-margin-large: 0.6rem;

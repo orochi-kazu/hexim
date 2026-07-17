@@ -39,7 +39,7 @@
   "menu_attrib_licences_icon_author": "作者: Dazzle UI",
   "menu_attrib_licences_icon_licence": "ライセンス: CC Attribution License",
   "menu_attrib_credits_title": "Credits",
-  "menu_attrib_credits_github_link_prefix": "Check out the source ",
-  "menu_attrib_credits_github_link": "on Github",
+  "menu_attrib_credits_github_link_prefix": "Check out ",
+  "menu_attrib_credits_github_link": "the source on Github",
   "menu_attrib_credits_github_link_suffix": "."
 }

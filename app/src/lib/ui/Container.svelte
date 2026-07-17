@@ -13,6 +13,7 @@
 <style lang="scss">
   .container {
     padding: var(--padding-margin-xsmall);
+    margin: var(--padding-margin-xxxlarge) 0;
     background-color: var(--bg-ui);
   }
 

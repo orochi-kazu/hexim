@@ -11,7 +11,7 @@
 <SplashMap />
 
 <div class="content">
-  <Title size="large">{t.game.title()}</Title>
+  <Title size="large" align="centre">{t.game.title()}</Title>
 
   <Menu
     title={text.title()}

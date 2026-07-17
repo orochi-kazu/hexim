@@ -4,34 +4,34 @@
 
 <style lang="scss">
   :global(:root) {
-    --fg-dark: var(--stone-100);
-    --fg-light: var(--stone-900);
+    --fg-dark: var(--taupe-100);
+    --fg-light: var(--taupe-800);
 
     --bg-dark: var(--neutral-900);
     --bg-light: var(--neutral-100);
 
-    --fg-ui-dark: var(--stone-100);
-    --fg-ui-light: var(--stone-900);
-    --fg-ui-focus-dark: var(--amber-300);
-    --fg-ui-focus-light: var(--amber-500);
+    --fg-ui-dark: var(--taupe-100);
+    --fg-ui-light: var(--taupe-900);
+    --fg-ui-focus-dark: var(--violet-300);
+    --fg-ui-focus-light: var(--amber-800);
 
-    --bg-ui-dark: var(--amber-900);
-    --bg-ui-light: var(--amber-100);
-    --bg-ui-hover-dark: var(--amber-800);
-    --bg-ui-hover-light: var(--amber-200);
-    --bg-ui-focus-dark: var(--amber-700);
-    --bg-ui-focus-light: var(--amber-300);
+    --bg-ui-dark: var(--slate-900);
+    --bg-ui-light: var(--zinc-100);
+    --bg-ui-hover-dark: var(--slate-800);
+    --bg-ui-hover-light: var(--zinc-200);
+    --bg-ui-focus-dark: var(--slate-700);
+    --bg-ui-focus-light: var(--zinc-300);
 
-    --bg-button-border-dark: var(--stone-600);
-    --bg-button-border-light: var(--stone-300);
-    --bg-button-highlight-dark: var(--stone-400);
-    --bg-button-highlight-light: var(--stone-100);
-    --bg-button-tint-dark: var(--stone-500);
-    --bg-button-tint-light: var(--stone-200);
-    --bg-button-shade-dark: var(--stone-700);
-    --bg-button-shade-light: var(--stone-400);
-    --bg-button-lowlight-dark: var(--stone-800);
-    --bg-button-lowlight-light: var(--stone-500);
+    --bg-button-border-dark: var(--slate-600);
+    --bg-button-border-light: var(--zinc-300);
+    --bg-button-highlight-dark: var(--slate-400);
+    --bg-button-highlight-light: var(--zinc-100);
+    --bg-button-tint-dark: var(--slate-500);
+    --bg-button-tint-light: var(--zinc-200);
+    --bg-button-shade-dark: var(--slate-700);
+    --bg-button-shade-light: var(--zinc-400);
+    --bg-button-lowlight-dark: var(--slate-800);
+    --bg-button-lowlight-light: var(--zinc-500);
 
     --bg-maptile-empty-dark: var(--mauve-900);
     --bg-maptile-empty-light: var(--mauve-300);
