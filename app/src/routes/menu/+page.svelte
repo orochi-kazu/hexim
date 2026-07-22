@@ -1,7 +1,7 @@
 <script>
   import { pushState } from '$app/navigation'
-  import Title from '$lib/ui/Title.svelte'
   import Menu from '$lib/ui/Menu.svelte'
+  import GameTitle from '$lib/feat/GameTitle.svelte'
   import SplashMap from '$lib/feat/game/map/SplashMap.svelte'
   import { text as t } from '$lib/feat/text'
 
@@ -11,7 +11,7 @@
 <SplashMap />
 
 <div class="content">
-  <Title size="large" align="centre">{t.game.title()}</Title>
+  <GameTitle />
 
   <Menu
     title={text.title()}

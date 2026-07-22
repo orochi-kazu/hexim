@@ -13,6 +13,7 @@ const menu = {
     note: m.common_menu_note,
     optionsPrefix: m.common_menu_options_prefix,
     optionsSuffix: m.common_menu_options_suffix,
+    back: common.action.back,
   },
   main: {
     title: m.menu_main_title,
@@ -37,7 +38,6 @@ const menu = {
       auto: m.menu_settings_theme_auto,
       dark: m.menu_settings_theme_dark,
     },
-    back: common.action.back,
   },
   attrib: {
     title: m.menu_attrib_title,
@@ -60,7 +60,6 @@ const menu = {
       },
       back: common.action.back,
     },
-    back: common.action.back,
   },
 }
 

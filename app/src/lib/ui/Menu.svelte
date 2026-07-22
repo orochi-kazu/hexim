@@ -1,9 +1,13 @@
 <script>
-  import { text } from '$lib/feat/text'
+  import { goto } from '$app/navigation'
+  import { text as t } from '$lib/feat/text'
+  import Button from './Button.svelte'
   import Container from './Container.svelte'
   import Text from './Text.svelte'
 
-  const { title, items, isShowingSubmenu } = $props()
+  const { title, items, isShowingSubmenu, backUrl } = $props()
+
+  const text = t.menu.common
 
   const itemElements = $state([])
   let selectedIndex = $state(0)
@@ -80,7 +84,7 @@
         <Text>{item.label}</Text>
       </label>
       <fieldset id={item.label}>
-        <Text>{text.menu.common.optionsPrefix()}</Text>
+        <Text>{text.optionsPrefix()}</Text>
         {#each item.options as option, oi}
           <input
             type="radio"
@@ -96,25 +100,31 @@
             </label>
           </Text>
         {/each}
-        <Text>{text.menu.common.optionsSuffix()}</Text>
+        <Text>{text.optionsSuffix()}</Text>
       </fieldset>
     {:else if item.type === 'toggle'}
       <Text>{item.label}</Text>
       <Text>
-        {text.menu.common.optionsPrefix()}
+        {text.optionsPrefix()}
         {item.value}
-        {text.menu.common.optionsSuffix()}
+        {text.optionsSuffix()}
       </Text>
     {:else}
       <Text>{item.label}</Text>
     {/if}
   </div>
   {#if item.note}
-    <Text>{text.menu.common.note({ message: item.note })}</Text>
+    <Text>{text.note({ message: item.note })}</Text>
   {/if}
 {/snippet}
 
-<Container {title}>
+{#snippet actions()}
+  {#if backUrl}
+    <Button onclick={() => goto(backUrl)}>{text.back()}</Button>
+  {/if}
+{/snippet}
+
+<Container {title} actions={backUrl ? actions : undefined}>
   {#each items as item, i}
     {#if isShowingSubmenu}
       <div>{@render itemContent(item, i)}</div>

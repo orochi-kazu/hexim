@@ -9,6 +9,6 @@
   items={[
     { label: text.licences.title(), type: 'link', path: '#/menu/attrib/licences' },
     { label: text.credits.title(), type: 'link', path: '#/menu/attrib/credits' },
-    { label: text.back(), type: 'link', path: '#/menu' },
   ]}
+  backUrl="#/menu"
 />

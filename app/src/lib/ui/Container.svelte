@@ -1,13 +1,22 @@
 <script>
   import Text from './Text.svelte'
-  const { children, title } = $props()
+  const { children, title, actions } = $props()
 </script>
+
+{#snippet divider()}
+  <div class="divider"></div>
+{/snippet}
 
 <div class="container">
   {#if title}
     <div class="container-title"><Text size="large">{title}</Text></div>
+    {@render divider()}
   {/if}
   {@render children()}
+  {#if actions}
+    {@render divider()}
+    {@render actions()}
+  {/if}
 </div>
 
 <style lang="scss">
@@ -18,9 +27,12 @@
   }
 
   .container-title {
-    border-bottom: var(--border-width-small) solid var(--bg-ui-focus);
     padding: 0 var(--padding-margin-small);
-    padding-bottom: var(--padding-margin-medium);
     margin-bottom: var(--padding-margin-xsmall);
+  }
+
+  .divider {
+    border-top: var(--border-width-small) solid var(--bg-ui-focus);
+    padding-bottom: var(--padding-margin-medium);
   }
 </style>
