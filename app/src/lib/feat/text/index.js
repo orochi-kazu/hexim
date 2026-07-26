@@ -17,11 +17,39 @@ const menu = {
   },
   main: {
     title: m.menu_main_title,
-    newGame: m.menu_main_new_game,
+    newGame: m.menu_newgame_title,
     newGamePlus: m.menu_main_new_game_plus,
     oldGame: m.menu_main_old_game,
     settings: m.menu_settings_title,
     attrib: m.menu_attrib_title,
+  },
+  newGame: {
+    title: m.menu_newgame_title,
+    players: {
+      sectionTitle: m.menu_newgame_players,
+      human: {
+        label: m.menu_newgame_players_human,
+        name: m.menu_newgame_players_name,
+      },
+      ai: { label: m.menu_newgame_players_ai },
+    },
+    map: {
+      sectionTitle: m.menu_newgame_map,
+      mode: {
+        label: m.menu_newgame_map_mode,
+        isolated: m.menu_newgame_map_mode_isolated,
+        shared: m.menu_newgame_map_mode_shared,
+      },
+      size: {
+        label: m.menu_newgame_map_mode_size,
+        xs: m.menu_newgame_map_mode_size_xs,
+        s: m.menu_newgame_map_mode_size_s,
+        m: m.menu_newgame_map_mode_size_m,
+        l: m.menu_newgame_map_mode_size_l,
+        xl: m.menu_newgame_map_mode_size_xl,
+      },
+    },
+    start: m.menu_newgame_start,
   },
   settings: {
     title: m.menu_settings_title,

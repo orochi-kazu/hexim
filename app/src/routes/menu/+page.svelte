@@ -16,7 +16,7 @@
   <Menu
     title={text.title()}
     items={[
-      { label: text.newGame(), onchoose: () => console.log('create a new game') },
+      { label: text.newGame(), type: 'link', path: '#/menu/new-game' },
       { label: text.newGamePlus(), onchoose: () => console.log('start from existing history') },
       { label: text.oldGame(), onchoose: () => console.log('load a saved game') },
       { label: text.settings(), type: 'link', path: '#/menu/settings' },

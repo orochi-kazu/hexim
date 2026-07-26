@@ -23,6 +23,9 @@
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
+  "dependencies": {
+    "hexim-core": "github:orochi-kazu/hexim-core#hexim-core"
+  },
   "devDependencies": {
     "@chromatic-com/storybook": "^5.2.1",
     "@inlang/paraglide-js": "^2.15.2",

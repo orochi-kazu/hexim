@@ -4,7 +4,7 @@
 
 <style lang="scss">
   :global(:root) {
-    --fg-dark: var(--taupe-100);
+    --fg-dark: var(--taupe-200);
     --fg-light: var(--taupe-800);
 
     --bg-dark: var(--neutral-900);
@@ -12,6 +12,8 @@
 
     --fg-ui-dark: var(--taupe-100);
     --fg-ui-light: var(--taupe-900);
+    --fg2-ui-dark: var(--indigo-200);
+    --fg2-ui-light: var(--yellow-900);
     --fg-ui-focus-dark: var(--violet-300);
     --fg-ui-focus-light: var(--amber-800);
 
@@ -83,6 +85,7 @@
       --bg: var(--bg-dark);
 
       --fg-ui: var(--fg-ui-dark);
+      --fg2-ui: var(--fg2-ui-dark);
       --fg-ui-focus: var(--fg-ui-focus-dark);
       --bg-ui: var(--bg-ui-dark);
       --bg-ui-hover: var(--bg-ui-hover-dark);
@@ -119,6 +122,7 @@
       --bg: var(--bg-light);
 
       --fg-ui: var(--fg-ui-light);
+      --fg2-ui: var(--fg2-ui-light);
       --fg-ui-focus: var(--fg-ui-focus-light);
       --bg-ui: var(--bg-ui-light);
       --bg-ui-hover: var(--bg-ui-hover-light);

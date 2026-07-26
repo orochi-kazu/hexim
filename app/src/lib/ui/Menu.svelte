@@ -5,7 +5,7 @@
   import Container from './Container.svelte'
   import Text from './Text.svelte'
 
-  const { title, items, isShowingSubmenu, backUrl } = $props()
+  const { title, items, isShowingSubmenu, backUrl, actions } = $props()
 
   const text = t.menu.common
 
@@ -75,10 +75,12 @@
       select(selectedIndex)
     }
   })
+
+  const showActions = $derived(backUrl !== undefined)
 </script>
 
 {#snippet itemContent(item, i)}
-  <div>
+  <div class={item.type === 'section-title' ? 'section-title' : undefined}>
     {#if item.type === 'toggle' && item.options?.length}
       <label for={item.label} class="menu-item-label">
         <Text>{item.label}</Text>
@@ -118,13 +120,18 @@
   {/if}
 {/snippet}
 
-{#snippet actions()}
-  {#if backUrl}
-    <Button onclick={() => goto(backUrl)}>{text.back()}</Button>
-  {/if}
+{#snippet actionButtons()}
+  <div class="action-buttons">
+    {#if backUrl}
+      <Button onclick={() => goto(backUrl)}>{text.back()}</Button>
+    {/if}
+    {#if actions}
+      {@render actions()}
+    {/if}
+  </div>
 {/snippet}
 
-<Container {title} actions={backUrl ? actions : undefined}>
+<Container {title} actions={showActions ? actionButtons : undefined}>
   {#each items as item, i}
     {#if isShowingSubmenu}
       <div>{@render itemContent(item, i)}</div>
@@ -195,6 +202,20 @@
     }
     min-width: var(--min-tappable-size);
     min-height: var(--min-tappable-size);
+
+    .section-title {
+      color: var(--fg2-ui);
+      :global(> span) {
+        padding-inline-end: var(--padding-margin-small);
+      }
+      &:after {
+        background-color: var(--fg2-ui);
+        content: '';
+        height: var(--border-width-small);
+        vertical-align: middle;
+        width: 100%;
+      }
+    }
   }
   div.menu-item {
     & > :first-child {
@@ -236,5 +257,10 @@
         outline-color: var(--fg-ui-focus);
       }
     }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
   }
 </style>
