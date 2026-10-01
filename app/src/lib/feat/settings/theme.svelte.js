@@ -8,6 +8,16 @@ const themeIndex = $derived(themes.indexOf(settings.theme.selected))
 const selectTheme = (index) => {
   const newIndex = (index + themes.length) % themes.length
   settings.theme.selected = themes[newIndex]
+  setColorSchemeVar()
+}
+
+const setColorSchemeVar = () => {
+  const cssTheme = {
+    [themesEnum.light]: 'light',
+    [themesEnum.auto]: 'dark light',
+    [themesEnum.dark]: 'dark',
+  }[settings.theme.selected]
+  document.querySelector(':root').style.setProperty('--color-scheme', cssTheme)
 }
 
 const choose = {
@@ -16,4 +26,4 @@ const choose = {
   set: (i) => selectTheme(i),
 }
 
-export { choose, getTheme, themes }
+export { choose, getTheme, setColorSchemeVar, themes }

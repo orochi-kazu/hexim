@@ -3,6 +3,7 @@
   import { asset } from '$app/paths'
   import { themes } from '$lib/core/settings.svelte'
   import { settings } from '$lib/deps'
+  import { setColorSchemeVar } from '$lib/feat/settings/theme.svelte'
   import style from '$lib/ui/style.svelte'
 
   const { children } = $props()
@@ -16,33 +17,28 @@
     setDeviceThemeIsDark(preferDark)
 
     preferDark.addEventListener('change', (event) => setDeviceThemeIsDark(event.matches))
-  }
 
-  const styleTheme = $derived.by(() =>
-    settings.theme.selected === themes.auto ? settings.theme.device : settings.theme.selected,
-  )
+    setColorSchemeVar()
+  }
 </script>
 
 <svelte:head>
   <link rel="icon" href={asset('/favicon.svg')} />
 </svelte:head>
 
-<div class={['themeable', styleTheme]}>{@render children()}</div>
+{@render children()}
 
 <style lang="scss">
   /* Elements in app.html */
+  :global(:root) {
+    color-scheme: var(--color-scheme, dark light);
+  }
   :global(body) {
     padding: 0;
     margin: 0;
     display: flex;
   }
-  :global(div#game-wrapper) {
-    flex-grow: 1;
-    display: flex;
-  }
-
-  /* Local elements */
-  div.themeable {
+  :global(div#game) {
     min-height: 100svh;
     flex-grow: 1;
     display: flex;
